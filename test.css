@@ -1,0 +1,83 @@
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSSここまで */
+
+/* 以下からCSSを記述すること */
+top-content {
+  background-color:blue;
+  height:100px;
+  width:300px;
+ }
+
+middle-content{
+  background-color: green;
+  height:100px;
+  width:300px;
+ }
+
+ bottom-content{
+  background-color: red ;
+  height:100px;
+  width:300px;
+ }
+
+
+
+ 問題８
+ body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSSここまで */
+
+header {
+  padding: 20px;
+  background-color: lightyellow;
+}
+
+.logo {
+  text-align: center;
+  height: 150px;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+/* 以下からCSSを記述すること */
+
+.list ul{
+  height: 80px;
+  width: 30%;
+  font-size: 55px;
+  margin: 1px black auto;
+
+}
+
+.list li {
+  height: 80px;
+  width: 30%;
+  font-size: 55px;
+  margin: 1px black auto;
+
+}

@@ -1,0 +1,453 @@
+HTML 基礎　メモ
+
+リンクを作成するためには、<a>要素を使い、テキストを囲むことでできる。
+
+<a>Progate</a>
+
+<a>要素にリンクの飛び先を指定するにはhref属性を追加する必要があります。
+<a href 0= “url”>というように書き、url部分にリンク先のURLを指定することで、そのページへのリンクを作ることができる。
+
+<a href=“https://prog-8.com”>Progate</a>
+
+開始タグの中に記載するのと、”を忘れないようにすることが大切。
+
+画像の表示には<img>要素を用います。
+<img src=“url”>　src属性のurlの部分に画像のリンクを指定することで、画像が表示。
+<img src=“https://prog-8.com/images/family.jpg”>___終了タグは不要。
+
+
+リストを作成する。
+<li>要素を使用。
+囲む要素で特徴が変わり、
+<ul>　黒点
+<ol> すうじ　連番
+
+要素を要素で囲むことを入れこという
+囲む方は親要素、囲まれるのは子要素
+
+入れ子構造の場合はインデントをします。
+<ul>
+	<li>HTML</li>
+	<li>PHP</li>
+	<li>Ruby</li>
+</ul>
+
+CSSとは？
+HTMLに対して色、大きさ、配置などを指定し、
+ページを「デザイン」すること
+レイアウトを整えるなども可能。
+
+HTMLとは別のファイルに記述するのが特徴で、
+「どこの」「何を」「どうするか」を指定できるr。
+Ex)
+index.html
+<h1>Progate</h1>
+
+Stylesheet.css
+h1 {
+	color: red;
+}
+これで、プロゲートの色が赤文字で出力される。
+
+1６進数のカラーコードで表され、「color:#ff0000;」
+Ex)
+Index.html
+<h1>これはh1です</h1>
+<p>これはpです</p>
+
+Stylesheet.css
+H1 {
+	color:#ff0000;
+}
+P{
+	color:#0000ff;
+}
+
+CSSを書くときにはインデントする必要がある。
+また、CSSのプロパティの末尾にはコロン（:）、行末にはセミコロン（；）をつける必要がある。
+H1{
+	color: #ff0000;
+}
+コメント配置も可能。
+/**/で囲んだ行がコメントになる。
+
+Color: #ff0000;
+}
+
+文字の大きさを変える。
+Font-size プロパティを用い、
+Font-sizeは、pxという単位を用いて指定。
+Px を書き忘れないようにしよう。
+Ex)
+index.html
+<h1>これはh1です</h1>
+<p>これはpです。</p>
+
+Stylesheet.css
+h1 {
+	color: #ff0000;
+	font-size:  10px;
+}
+
+P{
+	color: #0000ff;
+        Font-size: 40px;
+}
+ -->
+
+ <!-- font-family プロパティを用いると、フォントの種類を指定することができ、
+ font-family:　フォント名;とすることで、要素にそのフォントを適用できる。 -->
+<!--
+ <h1>HELLO WORLD</h1>
+ <p>HELLO WORLD</p>
+
+ h1{
+  font-family: serif;
+}
+
+p{
+  font-family: "Avenir Next";
+} -->
+
+<!-- 背景色を変える
+背景色を変えるにはbackground-colorプロパティを使います。
+指定方法はcolorプロパティと同じ
+「＃dddddd」のように同じ値が続く場合は、「＃ddd」と省略できる。
+stylesheet.css
+h1{
+  background-color:#dddddd;
+}
+p{
+  background-color: #ffd800;
+}
+
+要素の横と高さ
+width
+height
+px 指定 -->
+
+<!-- <h1>にんじゃわんこ</h1>
+<img src="https://prog-8.com/images/wanko.jpg">
+
+stylesheet.css
+h1{
+	width:500px;
+	height:80px;
+	background-color:#9de8ea;
+}
+img{
+	width:500px;
+	height:500px;
+}
+
+特定の要素にCSSを適用するには？
+したのulの枠に入った状態で色を変えると全て変更になってしまう。
+<ul>
+	<liA>HTML</liA>
+	<liA>HTML</liA>
+	<liA>HTML</liA>
+</ul>>
+
+そこで、classを使って名前をつけることにより、
+それぞれの要素を識別し、ここにCSSを適用できるようになる。
+class名でCSSを指定する場合、先頭にドッド「.」が必要になる。
+<ul>
+	<li class="selected">HTML</li>
+	<li></li>
+	<li></li>
+</ul>
+
+style.css
+selected{
+	color: red:
+}
+
+<ul>
+	<li class="selected">HTML</li>
+	<li　class="selected">PHP</li>
+	<li></li>
+</ul>
+
+同じクラス名をつける。
+「selected」というclass名がついている全てのHTML要素に同じCSSが適用される。
+注意点　
+classの場合は、ドットが必要、タグの場合は必要ない。
+
+目標物の作成
+以下の要素が必要
+html head body
+headにはページに関する情報、bodyには実際に表示したい内容。
+HTMLの型
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>
+			progateとは
+		</h1>
+		<p>オンライン学習サービスです</p>
+	</body>
+</html>
+
+head要素に記述した内容は表示されない。
+必ずいれる３要素がある。
+
+<head>
+	<meta charset="utf-8"
+	<title>Progate</title>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+上から、文字コード、ページタイトル、CSSの読み込み
+
+レイアウト
+ヘッダー　ページ上部
+メイン　ページの主なコンテンツ
+フッター　ページ下部のメニュー
+
+<div>要素によって構成される。
+	<div class="header">
+	</div>
+	<div class="main">
+	</div>
+	<div class="footer"
+</div>
+
+ヘッダーの枠組み
+<div class="header">
+	<div class="header-logo">Progate</div>
+	<div class="header-list">
+		<ul>
+
+		</ul>
+	</div>
+</div>
+リストのマークをなくす。
+<ul>
+	<li>黒点あり</li>
+	<li>黒点あり</li>
+</ul>
+
+<ul>
+	<li>黒点なし</li>
+	<li>黒点なし</li>
+</ul>
+
+style.css
+li{
+	list-style: none;
+}
+これでリストの先頭のマークを消せる。
+
+ヘッダーの中身を横ならびに
+基本、縦並びなので、横並びにするにはCSSが必要。
+<li>要素にfloat:left;をすることで横並びに、ヘッターロゴにやるとロゴとリスト全体が横並びに</li>
+
+余白を作る。
+paddingは上下左右同じ大きさのpxが追加される。
+index.html
+<div class="logo1">
+	progate
+</div>
+
+stylesheet.css
+.logo{
+	padding:20px;
+}
+
+padding-top:値；などにすると指定した方向のみpx追加
+padding-bottom,left,right
+
+個別指定・まとめてかく。
+.logo{
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+}
+これでも、いいがまとめてかける。
+logo1{
+	padding:20px 10px 20px 10px; 上　右　下　左
+}
+
+logo1{
+	padding:20px 10px ; 上下　右左
+}
+
+フッターのロゴは左側　リストは右側
+
+<div class="footer">
+	<div class="footer-logo">Progate</div>
+	<div class="footer-list">
+		<ul>
+			<li>会社概要</li>
+		</ul>
+	</div>
+</div>
+
+floatとpaddingをヘッダーの要素にのみ適用するには？
+入れ子のセレクト
+<ul class="header-list">
+	<li>ヘッダーのリスト</li>
+	<li>ヘッダーのリスト</li>
+</ul>
+
+<ul class="footer-list">
+	<li>フッターのリスト</li>
+</ul>
+
+style.css
+.header-list li{
+	color: #ff0000;
+}
+
+フッターのレイアウト
+ロゴとリストの配置
+
+フッターのロゴとリストは、以下の図のように左端と右端に配置されており、
+要素を左から横並びにするのはfloat:leftを用いたが、左右に横並びにするには？
+float:right
+指定した要素を右から順に横並びに。
+
+<ul>
+	<liA>HTML</liA>
+	<liA>HTML</liA>
+	<liA>HTML</liA>
+</ul>>
+
+li{
+	float:right;
+}
+
+mainの構造
+続けて、メイン部分のレイアウトを作っていく・
+copy-container,contens,contact-form
+<div class="copy-container">
+
+</div>
+span要素　文中の１部にCSSを適用させるときに使用
+<h1>
+	ようこそ<span>Progate</span>へ
+</h1>
+
+style.css{
+	color:#ff0000;
+}
+
+ブロック要素・インライン要素
+ブロック要素は親要素の幅いっぱいに広がる性質をもつ。
+div h1 p　など
+span a 要素のように改行されないものはインライン要素という。
+
+コンテンツを作ろう
+<div class="contents">
+	<h3>学べるレッスン</h3>
+	<div class="contents-item">
+		<img src="https;//...">
+		<p>HTML　&　CSS </p>
+	</div>
+</div>
+
+ボーダー
+
+要素にボーダーをつけるには、borderプロパティを用います。
+図のように、枠線の太さ、種類、色を指定して使用します。
+上下左右全てに線を付けたい場合はborderとし、特定の場所に飲み付けたい
+場合は「border-bottom」のように、「border-方向」とします。
+他にborder-top,boder-left,boder-rightなど。
+
+<div class="logo1">
+	Progate
+</div>
+
+<div class="logo2">
+	Progate
+</div>
+
+stylesheet.css
+.logo{
+	border:5px solid red;
+}
+
+.logo{
+	border-bottom: 1px solid #333;
+}
+
+padding と　margin
+paddingはborderの内側を作る。
+borderの外側に余白を作りたい場合、marginを用います。
+
+<div class="logo1">
+	progate
+</div>
+
+stylesheet.css
+.logo{
+	border:3px solid #ff0000;
+	padding:10px;
+	ボーダーの内側全体に10pxの余白を追加
+
+	margin:20px;
+	ボーダーの外側全体に20pxの余白を追加
+}
+
+ボックスモデル
+これまで勉強してきた、
+border,padding,marginはボックスモデルという概念に基づく
+HTMLの全ての要素には、border（初期状態では表示されない。）があり、
+その外側の余白はmargin,内側の余白はpaddingです。
+
+marginをまとめて書く
+marginもpaddingと同じで余白指定可能。
+.logo{
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.logo{
+	margin: 20px 10px 20px 10px;
+}
+
+.logo{
+	margin:20px 10px;
+}
+
+input,textarea
+input要素は１行のテキスト入力を受け取るための要素（件名に使える）
+textarea要素は複数行のテキスト入力を受け取るための要素です。
+input要素は終了タグが不要な点に注意してください。（内容に使える。）
+
+送信ボタンを作ろう
+input要素は送信ボタンにも使用。
+type属性を指定することができ、type属性にsubmitを指定すると、
+入力欄ではなく、したの図のような送信ボタンになります。
+ボタンに表示されるテキストは、日本語のブラウザではデフォルトで送信になります。
+
+index.html
+<input type="submit">
+これで「送信」ボタンができる。
+
+value属性　ボタンに表示されるテキストを変更することも狩野杖、
+value属性に任意の値を指定することで、ボタンに表示されるテキストを変更することができます。
+
+index.html
+<input type="submit" value="保存"　>
+これでデフォルト「送信」が「保存」になる。
+
+複数のセレクタに同じCSSを指定する。
+以下の図のように、複数のセレクタをコンマ(,)で区切ることで、それらに
+同じCSSを適用することができます。
+
+これを用いて、<input>要素と<textarea>要素に同じCSSを適用できる。
+index.html
+<h1>Hello World</h1>
+<p>ようこそprogateへ</p>
+
+stylesheet.css
+h1,p{
+	color: #ff0000;
+}
+,で区切って複数のセレクタにCSSを適用。
